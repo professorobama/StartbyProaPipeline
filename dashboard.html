@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .header .menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header .menu li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .header .menu li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .header .menu li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .header .menu li ul li {
+            margin: 0;
+        }
+
+        .header .menu li ul li a {
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        .header .menu li:hover ul {
+            display: block;
+        }
+
+        .btn-logout {
+            padding: 10px 20px;
+            background-color: #6a11cb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #2575fc;
+        }
+
+        .dashboard-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .dashboard-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="menu">
+            <li><a href="#">Medicamentos</a>
+                <ul>
+                    <li><a href="#">Analgésicos</a></li>
+                    <li><a href="#">Antibióticos</a></li>
+                    <li><a href="#">Anti-inflamatórios</a></li>
+                    <li><a href="#">Antialérgicos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Cuidados Pessoais</a>
+                <ul>
+                    <li><a href="#">Higiene Bucal</a></li>
+                    <li><a href="#">Cuidados com a Pele</a></li>
+                    <li><a href="#">Cuidados com o Cabelo</a></li>
+                    <li><a href="#">Desodorantes</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Suplementos</a>
+                <ul>
+                    <li><a href="#">Vitaminas</a></li>
+                    <li><a href="#">Minerais</a></li>
+                    <li><a href="#">Proteínas</a></li>
+                    <li><a href="#">Energéticos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Equipamentos Médicos</a>
+                <ul>
+                    <li><a href="#">Termômetros</a></li>
+                    <li><a href="#">Medidores de Pressão</a></li>
+                    <li><a href="#">Glicômetros</a></li>
+                    <li><a href="#">Máscaras</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="dashboard-container">
+        <h1>Bem-vindo ao Dashboard</h1>
+        <p>Você está logado como <strong>admin</strong>.</p>
+    </div>
+
+    <script>
+        function logout() {
+            alert('Você foi desconectado.');
+            window.location.href = 'index.html'; // Redirecionar para a página de login
+        }
+    </script>
+</body>
+</html>
