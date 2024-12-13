@@ -1,2 +1,2 @@
 # StartbyProaPipeline
-Exemplo de Entrega Continua e Integração Continua Pipeline.
+Exemplo de Pipeline com Entrega Continua e Integração Continua de um desenvolvimento FrontEnd.
